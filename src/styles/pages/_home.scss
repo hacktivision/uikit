@@ -1,0 +1,43 @@
+
+
+// Projects preview
+.preview-projects {
+    background-color: $white;
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 100px;
+        }
+    }
+
+}
+
+// Section header
+.section-header {
+    $this: &;
+
+    &__label {
+
+    }
+
+    &__title {
+        margin-top: 65px;
+        margin-bottom: 120px;
+        line-height: 1.2;
+    }
+
+    &--light {
+
+        #{$this}__title {
+            color: $black;
+        }
+    }
+}
+
+
+.intro-img {
+    background-image: url('../static/img/content/home/worker2.png');
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+}

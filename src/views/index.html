@@ -1,0 +1,78 @@
+@include('./layout/_header.html')
+
+<div class="container container--lg">
+    <div class="box-select" id="box">
+        <h1>Lorem, ipsum.</h1>
+        <div class="grid grid-2--sm">
+            <div class="grid__tile-2">
+                <select name="langs" id="langs" data-insert-to='#box' class="ui-select--expanded" value="">
+                    <option disabled selected>Language</option>
+                    <option value="js">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="typescript">Typescript</option>
+                    <option value="rust">Rust</option>
+                    <option value="typescript">Typescript</option>
+                    <option value="rust">Rust</option>
+                    <option value="typescript">Typescript</option>
+                    <option value="rust">Rust</option>
+                    <option value="typescript">Typescript</option>
+                    <option value="rust">Rust</option>
+                    <option value="typescript">Typescript</option>
+                    <option value="rust">Rust</option>
+                </select>
+            </div>
+
+            <div class="grid__tile-2">
+                <select name="langs" id="nums" data-insert-to='#box' class="ui-select--expanded" value="">
+                    <option disabled>Numbers</option>
+                    <option value="1">One</option>
+                    <option value="2" Two>Two</option>
+                    <option value="3" Two>Three</option>
+                    <option value="4" Two>Four</option>
+                    <option value="5" Two>Five</option>
+                    <option value="6" Two>Six</option>
+                    <option value="7" Two>Seven</option>
+                    
+                </select>
+            </div>
+
+            <div class="grid__tile-2">
+                <input type="checkbox" name="check" id="check" class="checkbox">
+                <label for="check" class="form-label"> <a href="#">соглашение</a> на обработку данных</label>
+            </div>
+
+            <div class="grid__tile-4">
+                <div class="group group--inline group--vertical group--outline group--sm" data-group-label="Выберете вариант">
+                    <div class="group__label">Выберете вариант: </div>
+                    <div>
+                        <input type="radio" name="choice" id="check1" class="radio">
+                        <label for="check1" class="form-label">Первый</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="choice" id="check2" class="radio">
+                        <label for="check2" class="form-label">Второй</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="choice" id="check3" class="radio">
+                        <label for="check3" class="form-label">Третий</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__tile-8">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor, sit amet <a href="#" class="link-success">consectetur adipisicing elit</a>. Dolore pariatur iure iusto debitis dicta quas iste nostrum labore quos, temporibus minima praesentium laboriosam nisi! Veritatis, odit officiis numquam odio aut voluptas in quisquam nesciunt necessitatibus, pariatur deserunt ab vero. Quae.</p>
+            </div>
+            <div class="grid__tile-8">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore pariatur iure iusto debitis dicta quas iste nostrum labore quos, temporibus minima praesentium laboriosam nisi! Veritatis, odit officiis numquam odio aut voluptas in quisquam nesciunt necessitatibus, pariatur deserunt ab vero. Quae.</p>
+            </div>
+            <div class="grid__tile-8">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore pariatur iure iusto debitis dicta quas iste nostrum labore quos, temporibus minima praesentium laboriosam nisi! Veritatis, odit officiis numquam odio aut voluptas in quisquam nesciunt necessitatibus, pariatur deserunt ab vero. Quae.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@include('./layout/_footer.html')

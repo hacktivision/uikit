@@ -1,0 +1,117 @@
+/* Grid _________________________*/
+.grid-group > .grid:not(:last-child) {
+    margin-bottom: 40px;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+
+/* Grid auto columns ___________*/
+.grid .cl-auto {
+    flex: 1 auto;
+}
+
+/* Grid base(8) columns ________*/
+.grid > .cl-1 {
+    width: 12.5%;
+}
+.grid > .cl-2 {
+    width: 25%;
+}
+.grid > .cl-3 {
+    width: 37.5%;
+}
+.grid > .cl-4 {
+    width: 50%;
+}
+.grid > .cl-5 {
+    width: 62.5%;
+}
+.grid > .cl-6 {
+    width: 75%;
+}
+.grid > .cl-7 {
+    width: 87.5%;
+}
+.grid > .cl-8 {
+    width: 100%;
+}
+
+/* Grid 2 columns ______________*/
+.grid.grid-2 > .cl-2{
+    width: 100%;
+}
+
+.grid.grid-1 > .cl-1{
+    width: 50%;
+} 
+
+/* Grid 3 columns ______________*/
+.grid.grid-3 > .cl-3{
+    width: 100%;
+}
+
+.grid.grid-3 > .cl-2{
+    width: 66.666%;
+} 
+
+.grid.grid-3 > .cl-1{
+    width: 33.333%;
+}
+
+.grid.grid-3 > *{
+    width: 33.333%;
+}
+
+/* Grid 4 columns ______________*/
+.grid.grid-4 > .cl-4{
+    width: 100%;
+}
+
+.grid.grid-4 > .cl-3{
+    width: 75%;
+}
+
+.grid.grid-4 > .cl-2{
+    width: 50%;
+} 
+
+.grid.grid-4 > .cl-1{
+    width: 25%;
+} 
+
+
+@media (max-width: 767.98px) {
+    .grid.grid-2--sm > [class*="cl"]{
+        width: 50%;
+    }
+
+    .grid.grid-4 > [class*="cl"].cl-2--sm{
+        width: 50%;
+    }
+}
+
+/* Common columns properties ____*/
+[class*="cl-"], 
+[class*="grid-"]:not(.grid-group) > *:not([class*="cl-"]){
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+@media (max-width: 1199.98px) {
+    .grid {
+        margin-left: calc(-15px + -25 * ((100vw - 320px) / (1200 - 320)));
+        margin-top: calc(-15px + -25 * ((100vw - 320px) / (1200 - 320)));
+    }
+    .grid [class*="cl-"], [class*="grid-"]:not(.grid-group) > *:not([class*="cl-"]) {
+        padding-top: calc(15px + 25 * ((100vw - 320px) / (1200 - 320)));
+        padding-left: calc(15px + 25 * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .grid-group > .grid:not(:last-child) {
+        margin-bottom: calc(15px + 25 * ((100vw - 320px) / (1200 - 320)));
+    }
+}

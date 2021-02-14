@@ -1,0 +1,27 @@
+// Colors
+$black: #000;
+$white: #fff;
+$gray-light: #F6F6F6;
+$gray-medium: #B6B6B6;
+$pink: #FF0E48;
+
+// Breakpoints
+$breakpoints: (
+	// Min
+	"min-xxs": ( min-width: 320px ),
+	"min-xs": ( min-width: 480px ),
+	"min-sm": (min-width: 768px),
+	"min-md": (min-width: 1024px),
+	"min-lg": (min-width: 1200px),
+
+	// Max
+	"max-xxs": (max-width: 479.98px),
+	"max-xs": (max-width: 767.98px),
+	"max-sm": (max-width: 959.98px),
+	"max-md": (max-width: 1023.98px),
+	"max-lg": (max-width: 1199.98px),
+)!default;
+
+// Base font
+$base-font: 'Inter', sans-serif;
+

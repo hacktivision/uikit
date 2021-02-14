@@ -1,0 +1,63 @@
+.group {
+    $this: &;
+
+    display: flex;
+    width: 100%;
+
+    // Outline
+    &--outline {
+        padding: em(24px);
+        border: 1px solid var(--color-gray-sm);
+        border-radius: em(8px);
+    }
+
+    // Inline
+    &--inline {
+        display: inline-flex;
+        width: auto;
+    }
+
+    // Sizes
+    &--xs > *:not(:last-child) {
+        margin-right: em(8px, 16px);
+    }
+
+    &--sm > *:not(:last-child) {
+        margin-right: em(16px, 16px);
+    }
+
+    & > *:not(:last-child) {
+        margin-right: em(24px, 16px);
+    }
+
+    &--lg:not(:last-child) {
+        margin-right: em(80px, 16px);
+    }
+
+    // Vertical
+    &--vertical {
+        flex-direction: column;
+    }
+
+    &--vertical > *:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: em(24px);
+    }
+
+    &--vertical#{$this}--sm > *:not(:last-child) {
+        margin-bottom: em(16px);
+    }
+
+    &--vertical#{$this}--xs > *:not(:last-child) {
+        margin-bottom: em(8px);
+    }
+
+    // If find expanded element
+    & > [class*="expanded"] {
+        min-width: auto;
+        max-width: inherit;
+        width: auto;
+        flex: 1 auto;
+    }
+
+}

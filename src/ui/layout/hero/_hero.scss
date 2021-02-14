@@ -1,0 +1,23 @@
+.hero {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 30em;
+    position: relative;
+    background-color: var(--color-default);
+    border-radius: 12px;
+    padding: px-to-em(48px, 16px);
+
+    &--rounding {
+        border-radius: 12px;
+    }
+
+    &__container {
+        width: 100%;
+    }
+
+    &__intro {
+        position: relative;
+        z-index: 1;
+    }
+}

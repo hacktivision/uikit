@@ -1,0 +1,89 @@
+.grid {
+    $this: &;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: em(-40px, 16px);
+    margin-left: em(-40px, 16px);
+
+    & > * {
+        padding-left: em(40px, 16px);
+        padding-top: em(40px, 16px);
+    }
+
+    @media (max-width: 1199.98px) {
+        &-2--xl > * {
+            width: 50%;
+        }
+        &-2--lg > * {
+            width: 50%;
+        }
+        &-2--sm > * {
+            width: 50%;
+        }
+        &-2--xs > * {
+            width: 50%;
+        }
+    }
+
+    &__tile-1 {
+        width: 12.5%;
+    }
+
+    &__tile-2 {
+        width: 25%;
+    }
+
+    &__tile-3 {
+        width: 37.5%;
+    }
+
+    &__tile-4 {
+        width: 50%;
+    }
+
+    &__tile-5 {
+        width: 62.5%;
+    }
+
+    &__tile-6 {
+        width: 75%;
+    }
+
+    &__tile-7 {
+        width: 87.5%;
+    }
+
+    &__tile-8 {
+        width: 100%;
+    }
+
+    
+
+    @media (max-width: 479.98px) {
+        & > * {
+            width: 100%;
+        }
+    }
+
+    &--tile-y-expanded {
+
+        & > [class*="tile"] > *:not(.tile) {
+            height: 100%;
+        }
+    
+    }
+}
+
+
+@media (max-width: 1199.98px) {
+    .grid {
+        margin-left: calc(-15px + -25 * ((100vw - 320px) / (1200 - 320)));
+        margin-top: calc(-15px + -25 * ((100vw - 320px) / (1200 - 320)));
+    }
+    .grid > [class*="tile"] {
+        padding-top: calc(15px + 25 * ((100vw - 320px) / (1200 - 320)));
+        padding-left: calc(15px + 25 * ((100vw - 320px) / (1200 - 320)));
+    }
+}
+

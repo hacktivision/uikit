@@ -1,0 +1,46 @@
+.radio {
+    position: relative;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    vertical-align: middle;
+
+    &::before {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        content: '';
+        display: block;
+        width: 28px;
+        height: 28px;
+        background-color: var(--color-gray-xs);
+        border: 1px solid var(--color-gray-sm);
+        border-radius: 100%;
+        cursor: pointer;
+        
+    }
+
+    &:checked:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background-color: var(--color-orange);
+        transition: all 0.2s;
+        pointer-events: none;
+    }
+}
+
+.form-label {
+    font-size: em(14px);
+    vertical-align: middle;
+    margin-left: 12px;
+    user-select: none;
+}
