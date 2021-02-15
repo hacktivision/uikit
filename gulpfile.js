@@ -82,8 +82,11 @@ const paths = {
 // UIKIT paths
 const UIKITpaths = {
     from: {
-        sass:  `${dirs.dev}/ui/**/*.scss`,
-        js: `${dirs.dev}/ui/**/*.js`,
+        scss:  `${dirs.dev}/ui/**/*.scss`,
+        js: {
+            all: `${dirs.dev}/ui/js/**/*.js`,
+            main: `${dirs.dev}/ui/ui.js`
+        },
         iocns: `${dirs.dev}/ui/source/iocns/*`,
     },
     to: {
@@ -92,7 +95,7 @@ const UIKITpaths = {
         iocns: `${dirs.prod}/ui/source/iocns/`,
     },
     live: {
-        sass:  `${dirs.dev}/ui/**/*.scss`,
+        scss:  `${dirs.dev}/ui/**/*.scss`,
         js:  `${dirs.dev}/ui/**/*.js`,
         source: `${dirs.dev}/ui/source/icons/*`
     }
@@ -100,7 +103,7 @@ const UIKITpaths = {
 
 // SPSKIT style
 const UIKITstyles = () => {
-    return src(UIKITpaths.from.sass)
+    return src(UIKITpaths.from.scss)
         .pipe(sourceMaps.init())
         .pipe(sass.sync().on('error', notify.onError()))
         .pipe(mediaGroup())
@@ -128,7 +131,7 @@ const UIKITstyles = () => {
 
 // SPSKIT scripts
 const UIKITscripts = () => {
-    return src(`${dirs.dev}/ui/ui.js`)
+    return src(`${UIKITpaths.from.js.main}`)
         .pipe(webpackStream({
             output: {
                 filename: 'ui.js'
@@ -351,7 +354,7 @@ const resourcesWatch = () => {
     watch([paths.live.fonts], fonts)
     watch(['./src/scripts/**/*.js'], scripts)
     watch([UIKITpaths.live.js], UIKITscripts)
-    watch([UIKITpaths.live.sass], UIKITstyles)
+    watch([UIKITpaths.live.scss], UIKITstyles)
 }
 
 // Common building
