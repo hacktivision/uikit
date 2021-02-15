@@ -1,0 +1,134 @@
+
+%common-style {
+
+}
+
+[type="text"], 
+[type="password"] {
+	height: 56px;
+	min-width: 1px;
+    max-width: 320px;
+	border: 1px solid var(--color-muted);
+	padding: 0 1.25em;
+	font-size: 100%;
+	background: transparent;
+    color: var(--color-secondary);
+    border-radius: 0.5em;
+
+    &:hover {
+        border-color: var(--color-muted); 
+    }
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-muted);;
+    }
+
+}
+
+
+
+.box-field {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+}
+.box-field__label {
+	display: block;
+	position: absolute;
+	left: 1em;
+	cursor: text;
+	transition: all 0.2s;
+	z-index: 0;
+	color: var(--color-ghost);
+}
+
+.box-field__input {
+	display: block;
+	position: relative;
+	flex: 1 auto;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+	z-index: 1;
+}
+
+.is-data+.box-field__label, .box-field__input:focus+.box-field__label{
+	transform: translateY(-27px) translateX(-5px) scale(0.85);
+	z-index: 2;
+	background: var(--color-default);;
+	color: var(--color-ghost);;
+}
+
+[data-status] {
+	position: relative;
+}
+
+[data-status]:before {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 100px;
+	z-index: 2;
+}
+
+[data-status]::after {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 100px;
+	z-index: 2;
+	background: var(--color-error);
+	opacity: 0.2;
+/* 	animation-name: status;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite; */
+}
+
+@keyframes status {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(3);
+		opacity: 0;
+	}
+}
+
+[data-status="success"]:before {
+	background: var(--color-success);
+}
+[data-status="warning"]:before {
+	background: var(--color-warning);
+}
+[data-status="error"]:before {
+	background: var(--color-error);
+}
+
+.message {
+	position: absolute;
+	top: 62px;
+	left: 20px;
+}
+
+[data-message="success"] {
+	color: var(--color-success);
+}
+[data-message="warning"] {
+	color: var(--color-warning);
+}
+[data-message="error"] {
+	color: var(--color-error);
+}

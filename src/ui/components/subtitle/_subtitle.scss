@@ -1,0 +1,32 @@
+
+
+.subtitle {
+    margin-top: -0.75em;
+    margin-bottom: 1.5rem;
+    color:  var(--color-ghost);
+
+    &--xxl{
+        font-size: 1.375em;
+    }
+
+    &--xl{
+        font-size: 1.25em;
+    }
+
+    &--lg{
+        font-size: px-to-em(14px, 16px);
+    }
+
+    &--md{
+        font-size: px-to-em(14px, 16px);
+    }
+
+    &--sm{
+        font-size: px-to-em(18px, 16px);
+    }
+
+    &--xs{
+        font-size: px-to-em(16px, 16px);
+    }
+
+}
