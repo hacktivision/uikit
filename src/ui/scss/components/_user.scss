@@ -1,0 +1,48 @@
+.user {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    &__avatar {
+        position: relative;
+        flex: 0 0 em(60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: em(60px);
+        height: em(60px);
+        border-radius: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+
+        // &::before {
+        //     content: '';
+        //     display: block;
+        //     padding-bottom: 100%;
+        // }
+
+        & > img {
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        margin-left: em(16px);
+    }
+
+    &__name {
+        margin-bottom: em(2px);
+        font-size: em(18px);
+        font-weight: 500;
+
+    }
+
+    &__intro {
+        font-size: em(14px);
+        font-weight: 400;
+        color: var(--color-gray-xl);
+    }
+}

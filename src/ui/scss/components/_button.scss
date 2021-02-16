@@ -7,6 +7,7 @@ $button-font-size-sm: 14px;
 
 %common-style {
     position: relative;
+    flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -15,13 +16,12 @@ $button-font-size-sm: 14px;
     min-width: 58px;
     padding: 0 36px;
     border: none;
-    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
     vertical-align: middle;
 }
 
@@ -78,7 +78,7 @@ $button-muted-outline: 1px solid var(--color-muted);
             transform: scale(0.01);
         }
         40% {
-            opacity: 0.06;
+            opacity: 0.03;
         }
         100% {
             transform: scale(1.2);
@@ -103,7 +103,6 @@ $button-muted-outline: 1px solid var(--color-muted);
         padding: 0 28px;
         font-size: 14px;
         min-width: 46px;
-        font-weight: 600;
     }
 
     &--expanded {
@@ -127,7 +126,7 @@ $button-muted-outline: 1px solid var(--color-muted);
     }
 
     &--primary {
-        color: var(--color-secondary);
+        color: var(--color-default);
         background-color: var(--color-primary);
 
         

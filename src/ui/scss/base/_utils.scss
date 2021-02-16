@@ -16,8 +16,7 @@
     left: -100%;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(2px); 
+    background-color: rgba(#fff, 0.9);
     opacity: 0;
     transition: opacity 0.35s ease-in-out, 0.1s, left 0.3s ease-in-out 0.3s;
 
@@ -26,4 +25,8 @@
         opacity: 1;
         transition: opacity 0.35s ease-in-out, left 0s ease-in-out 0s;
     }
+}
+
+.box-shadow{
+    box-shadow: 0 10px 30px rgba(0,0,0,0.075);
 }

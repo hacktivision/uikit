@@ -1,10 +1,10 @@
 .section {
-    padding-top: px-to-em(40px, 16px);
-    padding-bottom: px-to-em(40px, 16px);
+    padding-top: em(40px, 16px);
+    padding-bottom: em(40px, 16px);
        
     &--lg {
-        padding-bottom: px-to-em(80px, 16px);
-        padding-top: px-to-em(80px, 16px);
+        padding-bottom: em(80px, 16px);
+        padding-top: em(80px, 16px);
     }
 
     &--default {
@@ -12,6 +12,6 @@
     }
 
     &__title {
-        margin-bottom: px-to-em(32px, 16px);
+        margin-bottom: em(32px, 16px);
     }
 }

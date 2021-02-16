@@ -5,15 +5,25 @@
     height: 30em;
     position: relative;
     background-color: var(--color-default);
-    border-radius: 12px;
-    padding: px-to-em(48px, 16px);
-
+    border-radius: 16px;
+    padding: em(48px, 16px);
+    
     &--rounding {
         border-radius: 12px;
     }
 
+    &--primary {
+        background-color: var(--color-primary);
+    }
+
+    &--muted {
+        background-color: var(--color-gray-xs);
+    }
+
     &__container {
         width: 100%;
+        // padding-left: 0;
+        // padding-right: 0;
     }
 
     &__intro {

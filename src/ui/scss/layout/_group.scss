@@ -2,6 +2,7 @@
     $this: &;
 
     display: flex;
+    align-items: center;
     width: 100%;
 
     // Outline
@@ -18,6 +19,10 @@
     }
 
     // Sizes
+    & > *:not(:last-child) {
+        margin-right: em(24px, 16px);
+    }
+
     &--xs > *:not(:last-child) {
         margin-right: em(8px, 16px);
     }
@@ -26,16 +31,13 @@
         margin-right: em(16px, 16px);
     }
 
-    & > *:not(:last-child) {
-        margin-right: em(24px, 16px);
-    }
-
     &--lg:not(:last-child) {
         margin-right: em(80px, 16px);
     }
 
     // Vertical
     &--vertical {
+        align-items: inherit;
         flex-direction: column;
     }
 

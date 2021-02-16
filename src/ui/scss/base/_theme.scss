@@ -1,0 +1,36 @@
+// Vars
+:root, .theme-light {
+    --color-default: var(--color-white);
+    --color-primary: var(--color-orange);
+    --color-secondary: var(--color-dark-xxl);
+    --color-muted: var(--color-gray-xs);
+    --color-ghost: var(--color-gray-sm);
+    --color-success: var(--color-green);
+    --color-warning: var(--color-yellow);
+    --color-error: var(--color-red);
+}
+
+:root .theme-dark {
+    --color-default: var(--color-dark-xl);
+    --color-primary: var(--color-orange);
+    --color-secondary: var(--color-gray-xs);
+    --color-muted: var(--color-dark-lg);
+    --color-ghost: var(--color-gray-xxl);
+    --color-success: var(--color-green);
+    --color-warning: var(--color-yellow);
+    --color-error: var(--color-red);
+}
+
+// Common styles
+// body {
+//     background-color: var(--color-dark-xxl);
+//     color: var(--color-secondary);
+// }
+
+// body .theme-dark {
+//     background-color: var(--color-dark-xxl);
+//     color: var(--color-secondary);
+// }
+
+// Common styles
+
