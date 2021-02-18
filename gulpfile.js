@@ -211,7 +211,7 @@ const convertFonts = () => {
 
 // Styles file
 const styles = () => {
-    return src('./src/styles/**/*.scss')
+    return src(['./src/styles/**/*.scss', './node_modules'])
         .pipe(sourceMaps.init())
         .pipe(sass.sync().on('error', notify.onError()))
         .pipe(mediaGroup())

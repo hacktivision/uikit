@@ -1,7 +1,35 @@
 .user {
+    $this: &;
+
     display: flex;
     width: 100%;
     align-items: center;
+
+    &--sm {
+
+        & #{$this}__avatar {
+            flex: 0 0 em(48px);
+            width: em(48px);
+            height: em(48px);
+        }
+
+        & #{$this}__name {
+            margin-bottom: 0;
+        }
+    }
+
+    &--xs {
+
+        & #{$this}__avatar {
+            flex: 0 0 em(36px);
+            width: em(36px);
+            height: em(36px);
+        }
+
+        & #{$this}__name {
+            margin-bottom: 0;
+        }
+    }
 
     &__avatar {
         position: relative;
@@ -16,12 +44,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
-
-        // &::before {
-        //     content: '';
-        //     display: block;
-        //     padding-bottom: 100%;
-        // }
 
         & > img {
             position: absolute;

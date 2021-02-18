@@ -1,21 +1,31 @@
 .card {
-    padding: em(40px, 16px);
+    padding: em(40px);
     background-color: var(--color-default);
     border-radius: 12px;
     
     &--lg {
-        padding: em(60px, 16px);
+        padding: em(60px);
     }
 
     &--sm {
-        padding: em(20px, 16px);
+        padding: em(24px);
     }
 
     &__header {
-        padding-bottom: em(40px, 16px);
+        
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-size: em(24px);
+        font-weight: 500;
+    }
+
+    &__body {
+        padding: em(20px) 0;
     }
 
     &__footer {
-        padding-top: em(40px, 16px);
+        
     }
 }
